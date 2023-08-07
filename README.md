@@ -6,54 +6,9 @@ Uma startup de tecnologia e desenvolvimento web decidiu criar uma API Rest para 
 
 Através dessa API deve ser possível realizar o registro do desenvolvedor, associar informações extras ao mesmo, registrar projetos e associar as tecnologias utilizadas nesses projetos e por fim adicionar projetos aos seus respectivos desenvolvedores.
 
-A seguir estarão todas as regras de negócio definidas pela startup para esse projeto. Lembre-se de seguir à risca todas as regras impostas.
-
-Vamos lá?!
+A seguir estarão todas as regras de negócio definidas pela startup para esse projeto.
 
 #
-
-## **Regras da entrega**
-
-A entrega deve seguir as seguintes regras:
-
-- O código deve estar em TypeScript, caso não esteja a **entrega será zerada**;
-- Deverá ser utilizado um banco de dados **_postgres_** para a elaboração da API;
-- O nome da tabela, das colunas e demais especificações, devem ser seguidas **à risca**. Caso tenha divergência, **será descontado nota**;
-- **Tenha muita atenção sobre o nome das chaves nos objetos de entrada e saída de cada requisição**;
-- **Na raiz do diretório** deve-se conter uma pasta nomeada **sql**, com dois arquivos:
-
-  - **createTables.sql**: contendo as queries de criação e inserção das tabelas e type;
-  - **diagram.png/jpg**: um arquivo **_.png_** ou **_.jpg_** contendo o diagrama da tabela;
-  - caso o arquivo **_createTables.sql_** não exista, **a entrega será zerada**.
-
-- **Essa entrega possui testes automatizados**;
-- Para que os testes possam ser executados, existe um script de limpeza do banco que utiliza as queries do arquivo createTables.sql para ser executado, por isso é importante seguir as orientações sobre subdiretório sql e seus arquivos à risca.
-
-  - Caso o subdiretório sql e o arquivo createTables.sql não estejam com os nomes corretos ou no caminho correto os testes falharão, pois não será possível encontrar as queries a serem executadas;
-  - Caso o nome de alguma tabela, tipo ou coluna não esteja de acordo com o esperado, os testes também falharão.
-
-- A organização dos demais arquivos e pastas deve seguir o que foi visto previamente.
-
-### AVISO
-
-Os testes não devem ser alterados em nenhum momento da aplicação, caso tenha sido feito alguma alteração nos testes, a entrega será zerada. 
-
-- Para rodar os testes precisa modificar a variavel de ambiente para test: **NODE_ENV="test"**
-- Para rodar a aplicação precisa popular as variaveis de ambiente, que irá encontrar no env.exemple:
-    - Tanto as com sufixo test (DB_TEST, DB_TEST_USER...) para conseguir utilizar o comando npm run test. 
-    - Quanto as demais (DB, DB_USER...)para conseguir utilizar o comando npm run dev 
-    - Aconselhamos criar dois bancos de dados um para o debug e outro para testes. 
-- Não altere os arquivos: 
-  - jest.config
-  - configTestsDatabase.ts
-  - __tests__
-  - server.ts
-- Não remova o que está dentro do package.json, apenas adicione as libs que irá necessitar utilizar, caso elas já não estejam instaladas. 
-- Para rodar os testes utilize o comando: **npm run test**
-- Caso queria rodar uma bateria de testes especificos pode utilizar:
-  - npm run test <arquivo teste que está dentro de __testes__>
-  - **Exemplo**: npm run test createDeveloper.test
-
 
 ## **Tabelas do banco de dados**
 
